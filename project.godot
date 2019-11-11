@@ -1,0 +1,63 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="programming"
+run/main_scene="res://main.tscn"
+config/icon="res://icon.png"
+
+[compression]
+
+formats/zstd/long_distance_matching=true
+
+[debug]
+
+gdscript/completion/autocomplete_setters_and_getters=true
+
+[display]
+
+window/size/height=768
+window/size/test_width=1024
+window/size/test_height=768
+window/dpi/allow_hidpi=true
+
+[editor]
+
+convert_text_resources_to_binary_on_export=true
+
+[gui]
+
+theme/use_hidpi=true
+
+[physics]
+
+3d/physics_engine="Bullet"
+
+[rendering]
+
+quality/driver/fallback_to_gles2=true
+quality/2d/gles2_use_nvidia_rect_flicker_workaround=true
+quality/2d/use_pixel_snap=true
+threads/thread_model=2
+vram_compression/import_bptc=true
+vram_compression/import_etc=true
+vram_compression/import_pvrtc=true
+quality/shadows/filter_mode=2
+quality/filters/use_nearest_mipmap_filter=true
+quality/subsurface_scattering/quality=2
+quality/subsurface_scattering/follow_surface=true
+quality/filters/msaa=2
+environment/default_environment="res://default_env.tres"
