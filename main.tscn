@@ -113,10 +113,10 @@ margin_left = 498.0
 margin_top = 179.0
 margin_right = 716.0
 margin_bottom = 196.0
-custom_fonts/font = SubResource( 5 )
 custom_constants/shadow_offset_x = 5
 custom_constants/shadow_offset_y = 5
 custom_constants/shadow_as_outline = 5
+custom_fonts/font = SubResource( 5 )
 text = "by Andrew (Andrej) Poženel (SDT)"
 align = 1
 valign = 1
@@ -158,11 +158,12 @@ text = "Change model to MEAT"
 [node name="Tween" type="Tween" parent="."]
 
 [node name="SpotLight2" type="SpotLight" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-008, 1, 0, -1, -4.37114e-008, -0.414197, 0.840558, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.414197, 0.840558, 0 )
 light_color = Color( 1, 1, 0.764706, 1 )
 light_energy = 4.86
 shadow_enabled = true
 spot_range = 1.4
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]

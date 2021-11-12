@@ -10,7 +10,6 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
-
 }
 
 [application]
@@ -22,9 +21,14 @@ config/icon="res://icon.png"
 [compression]
 
 formats/zstd/long_distance_matching=true
+formats/zstd/compression_level=22
+formats/zstd/window_log_size=30
+formats/zlib/compression_level=9
+formats/gzip/compression_level=9
 
 [debug]
 
+settings/stdout/verbose_stdout=true
 gdscript/completion/autocomplete_setters_and_getters=true
 
 [display]
@@ -33,14 +37,25 @@ window/size/height=768
 window/size/test_width=1024
 window/size/test_height=768
 window/dpi/allow_hidpi=true
+window/vsync/use_vsync=false
 
 [editor]
 
+search_in_file_extensions=PoolStringArray( "gd", "gdshader", "shader", "tres", "tscn" )
 convert_text_resources_to_binary_on_export=true
 
 [gui]
 
 theme/use_hidpi=true
+
+[input_devices]
+
+buffering/agile_event_flushing=true
+
+[logging]
+
+file_logging/enable_file_logging.pc=false
+file_logging/max_log_files=0
 
 [physics]
 
@@ -49,15 +64,22 @@ theme/use_hidpi=true
 [rendering]
 
 quality/driver/fallback_to_gles2=true
-quality/2d/gles2_use_nvidia_rect_flicker_workaround=true
-quality/2d/use_pixel_snap=true
+2d/options/use_nvidia_rect_flicker_workaround=true
+2d/snapping/use_gpu_pixel_snap=true
 threads/thread_model=2
+threads/thread_safe_bvh=true
 vram_compression/import_bptc=true
 vram_compression/import_etc=true
 vram_compression/import_pvrtc=true
 quality/shadows/filter_mode=2
 quality/filters/use_nearest_mipmap_filter=true
+batching/precision/uv_contract=true
 quality/subsurface_scattering/quality=2
 quality/subsurface_scattering/follow_surface=true
+quality/voxel_cone_tracing/high_quality=true
 quality/filters/msaa=2
+quality/filters/use_fxaa=true
+quality/filters/use_debanding=true
 environment/default_environment="res://default_env.tres"
+quality/2d/gles2_use_nvidia_rect_flicker_workaround=true
+quality/2d/use_pixel_snap=true
