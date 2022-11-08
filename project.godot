@@ -14,8 +14,10 @@ _global_script_class_icons={
 
 [application]
 
-config/name="programming"
+config/name="Godot_3_1_1 showcase test"
+config/description="Godot_3_1_1 showcase test , now updated to the Godot Mono 3.5.1"
 run/main_scene="res://main.tscn"
+run/low_processor_mode=true
 run/delta_sync_after_draw=true
 config/icon="res://icon.png"
 
@@ -29,7 +31,6 @@ formats/gzip/compression_level=9
 
 [debug]
 
-settings/stdout/verbose_stdout=true
 gdscript/completion/autocomplete_setters_and_getters=true
 
 [display]
@@ -59,10 +60,16 @@ pointing/emulate_touch_from_mouse=true
 file_logging/enable_file_logging.pc=false
 file_logging/max_log_files=0
 
+[mono]
+
+project/assembly_name="programming"
+
 [physics]
 
+3d/smooth_trimesh_collision=true
 common/enable_pause_aware_picking=true
 3d/physics_engine="Bullet"
+common/physics_interpolation=true
 
 [rendering]
 
@@ -76,9 +83,14 @@ vram_compression/import_etc=true
 vram_compression/import_pvrtc=true
 quality/shadows/filter_mode=2
 batching/precision/uv_contract=true
+gles3/shaders/shader_compilation_mode=2
+gles3/shaders/shader_compilation_mode.mobile=2
+gles3/shaders/shader_compilation_mode.web=2
 quality/subsurface_scattering/quality=2
 quality/subsurface_scattering/follow_surface=true
 quality/filters/msaa=2
+quality/filters/use_fxaa=true
+quality/filters/use_debanding=true
 environment/default_environment="res://default_env.tres"
 quality/2d/gles2_use_nvidia_rect_flicker_workaround=true
 quality/2d/use_pixel_snap=true
